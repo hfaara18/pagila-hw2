@@ -12,6 +12,6 @@
 select last_name, first_name from actor 
     where (first_name, last_name) not in (
         select first_name, last_name from actor 
-            inner join customer using (first_name, last_name)
+            join customer using (first_name, last_name)
         )
 order by last_name, first_name;

@@ -8,6 +8,6 @@
 select distinct title from film 
     where film_id not in (
         select film_id from film 
-            inner join inventory using (film_id) 
+            join inventory using (film_id) 
     ) 
 order by title;
